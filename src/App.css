@@ -1,0 +1,41 @@
+.App{
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.App--blob{
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  left: 100%;
+  top:0%;
+  transform: translate(-100%,0%);   
+}
+.App h1 {
+  font-size: 5rem;
+  line-height: 37px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #293264;
+}
+.App p {
+  font-size: 3rem;
+  line-height: 19px;
+  text-align: center;
+  margin-bottom: 90px;
+  color: #293264;
+}
+.App button {
+  font-size: 3rem;
+  background: #4d5b9e;
+  border-radius: 15px;
+  padding: 16px 50px;
+  margin:0 auto;
+  display:block;
+  border: none;
+  outline: none;
+  color:white;
+}
