@@ -10,3 +10,4 @@ this app is the last solo project of react fundamentals course ou **scrimba**.
 
 just the figma design is provided.
 
+demo: https://ahmed-kamal-quizical.netlify.app/
