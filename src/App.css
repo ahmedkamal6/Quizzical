@@ -23,7 +23,8 @@
 }
 .App p {
   font-size: 3rem;
-  line-height: 19px;
+  max-width: 50%;
+  line-height: auto;
   text-align: center;
   margin-bottom: 90px;
   color: #293264;
@@ -38,4 +39,32 @@
   border: none;
   outline: none;
   color:white;
+}
+.App--catAndDif{
+  display: flex;
+  gap: 3rem;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.App--catAndDif select{
+  font-size: 1.5rem;
+  width: 150px;
+  padding: 0.5rem;
+  outline: none;
+}
+
+small{
+  color: rgb(163, 168, 172);
+  font-size: 12px;
+  position: absolute;
+  bottom: 5%;
+}
+small a{
+  text-decoration: none;
+  color: steelblue;
+}
+
+@media screen and (min-width:768px) {
+  
 }

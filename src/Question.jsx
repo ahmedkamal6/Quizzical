@@ -3,7 +3,7 @@ import "./Question.css";
 import Single from "./Single";
 import { nanoid } from "nanoid";
 import blob from "./assets/blob 5.png";
-export default function Question() {
+export default function Question(props) {
   const [questions, setQuestions] = React.useState([]);
   const [score, setScore] = React.useState(0);
   const [useColor, setUseColor] = React.useState(false);
@@ -31,7 +31,7 @@ export default function Question() {
   async function getQuestions() {
     setLoading(true)
     const url =
-      "https://opentdb.com/api.php?amount=5&category=27&difficulty=easy&type=multiple";
+      `https://opentdb.com/api.php?amount=5&category=${props.category}&difficulty=${props.difficulty}&type=multiple`;
     const response = await fetch(url);
     const json = await response.json();
     setEnd(false);
@@ -126,8 +126,14 @@ export default function Question() {
     getQuestions();
     
   }
+  function back(){
+    location.reload()
+  }
   return (
     <div id="quiz--wrapper">
+      <div className="back" onClick={back}>
+        <div className="back-arrow"></div>
+      </div>
       {loading && <div className="loading"></div>}
       <img src={blob} alt="blob" className="quiz--blob" />
       {!loading && questionElements}
